@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.metamask.adapters.CustomDialog
 import com.example.metamask.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayoutMediator
@@ -60,6 +61,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val text: String = binding.textCopy.text.toString()
 
             createClipData(text)
+        })
+        //Network Dialog 화면 띄우기
+        val dialog = CustomDialog(this)
+        binding.networkList.setOnClickListener(View.OnClickListener {
+            dialog.myDig()
+
         })
 
         //account 화면 bottomdialog 띄우기
