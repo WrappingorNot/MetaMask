@@ -10,15 +10,17 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class BottomDialog() : BottomSheetDialogFragment() {
     private lateinit var binding: BottomDialogBinding
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding = BottomDialogBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
+        binding.buttonBottomSheet.setOnClickListener{
+            dismiss()
+        }
     }
 }
