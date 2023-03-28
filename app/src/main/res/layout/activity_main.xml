@@ -16,15 +16,19 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="  Ethereum Main Network ↓"
                 android:layout_gravity="center"
-                android:text="Account1"
+                android:textSize="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/dg_radius_2"
+                android:drawableStart="@drawable/layer_list"
+                />
 
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="24dp" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -49,7 +53,7 @@
             android:id="@+id/account_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="45dp"
             android:background="@drawable/bg_radius_text"
             android:contentDescription="계정 변경"
             android:scaleType="centerCrop"
@@ -59,10 +63,23 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Account1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_btn"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
+            android:layout_marginTop="160dp"
             android:gravity="center"
             android:text="0 ETH"
             android:textSize="30dp"
@@ -88,66 +105,71 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_radius_text"
-            android:ellipsize="middle"
             android:clickable="true"
+            android:focusable="true"
+            android:ellipsize="middle"
             android:maxLines="1"
             android:text="0x5837244800000051540A81784148A24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/floatingActionButton"
             android:layout_width="50dp"
             android:layout_height="60dp"
             android:layout_marginTop="5dp"
-            android:contentDescription=" 구매"
-            android:text="구매"
-            android:textSize="8dp"
             android:backgroundTint="#0383E2"
+            android:contentDescription=" 구매"
             android:foregroundTint="#FFFFFF"
             android:foregroundTintMode="src_atop"
+            android:text="구매"
+            android:textSize="8dp"
             app:cornerRadius="100dp"
             app:iconTint="#00FFFCFC"
             app:iconTintMode="multiply"
             app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_copy">
+            app:layout_constraintTop_toBottomOf="@+id/text_copy"
+            tools:ignore="TextSizeCheck">
 
         </com.google.android.material.button.MaterialButton>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/floatingActionButton2"
-            android:layout_width="55dp"
-            app:cornerRadius="100dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
             android:backgroundTint="#0383E2"
             android:contentDescription="보내기"
+            android:src="@drawable/img_account"
             android:text="보내기"
-            android:textSize="8dp"
+            android:textSize="6dp"
+            app:cornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
             app:layout_constraintEnd_toEndOf="@+id/text_copy"
             app:layout_constraintEnd_toStartOf="@+id/floatingActionButton3"
-            android:src="@drawable/img_account"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+            tools:ignore="TextSizeCheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/floatingActionButton3"
             android:layout_width="50dp"
-            app:cornerRadius="100dp"
             android:layout_height="60dp"
+            android:backgroundTint="#0383E2"
             android:contentDescription="스왑"
             android:text="스왑"
             android:textSize="8dp"
-            android:backgroundTint="#0383E2"
+            app:cornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/floatingActionButton2"
-            app:layout_constraintTop_toTopOf="@+id/floatingActionButton2" />
+            app:layout_constraintTop_toTopOf="@+id/floatingActionButton2"
+            tools:ignore="TextSizeCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar: Toolbar = binding.toolbar
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        getSupportActionBar()?.setHomeAsUpIndicator(android.R.drawable.ic_menu_sort_by_size)
+        getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.baseline_dehaze_24)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //Layout 초기화
