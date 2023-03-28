@@ -1,8 +1,14 @@
 package com.example.metamask
 
+import android.content.ClipData
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
+import android.text.ClipboardManager
 import android.view.MenuItem
+import android.view.View
 import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -42,8 +48,39 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 tab.text = tabTitleArray[position]
             }.attach()
         }
+        //스왑화면으로 인텐트
+        binding.floatingActionButton3.setOnClickListener {
+            val intent = Intent(this, SwapActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        //클립보드 복사
+        binding.textCopy.setOnClickListener(View.OnClickListener {
+            val text: String = binding.textCopy.text.toString()
+
+            createClipData(text)
+        })
+
+        //account 화면 bottomdialog 띄우기
+        binding.accountBtn.setOnClickListener(View.OnClickListener {
+            val bottomdialog = BottomDialog()
+
+            bottomdialog.show(supportFragmentManager, bottomdialog.tag)
+        })
     }
 
+    private fun createClipData(message: String){
+        // 클립 보드 시스템 가져오기
+        val clipboardManager =
+        getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+
+        val clipData: ClipData = ClipData.newPlainText("message", message)
+        clipboardManager.setPrimaryClip(clipData)
+
+
+        Toast.makeText(this, "복사되었습니다.", Toast.LENGTH_SHORT).show()
+    }
 
     // 툴바 메뉴 버튼이 클릭 됐을 때 실행하는 함수
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
