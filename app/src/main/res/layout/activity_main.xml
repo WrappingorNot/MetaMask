@@ -53,7 +53,13 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
-        app:menu="@menu/navi_menu" />
+        app:menu="@menu/navi_menu">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.navigation.NavigationView>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
 import android.text.ClipboardManager
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Switch
@@ -14,8 +15,13 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.metamask.adapters.CustomDialog
+import com.example.metamask.adapters.ViewHolder
+import com.example.metamask.adapters.ViewHolderNetwork
 import com.example.metamask.databinding.ActivityMainBinding
+import com.example.metamask.dataclasses.Dataclass
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -65,7 +71,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //Network Dialog 화면 띄우기
         val dialog = CustomDialog(this)
         binding.networkList.setOnClickListener(View.OnClickListener {
+
+            //리사이클러 뷰 사용
+
+
             dialog.myDig()
+
 
         })
 

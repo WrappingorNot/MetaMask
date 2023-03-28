@@ -1,29 +1,32 @@
 package com.example.metamask.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.metamask.R
+import com.example.metamask.dataclasses.netData
 
-class ViewHolderNetwork(val itemList: ArrayList<String>) :
+class ViewHolderNetwork(val itemList: ArrayList<netData>) :
     RecyclerView.Adapter<ViewHolderNetwork.BoardViewHolderNet>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BoardViewHolderNet {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recycle_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.network_item, parent, false)
         return BoardViewHolderNet(view)
     }
 
     override fun onBindViewHolder(holder: BoardViewHolderNet, position: Int) {
         TODO("Not yet implemented")
-        holder.tv_netName.text = itemList[position]
+        holder.tv_netName.text = itemList[position].name
     }
 
 
 
     override fun getItemCount(): Int {
-        return itemList.count()
+        Log.d("size", itemList.count().toString())
+        return 1
     }
 
 
