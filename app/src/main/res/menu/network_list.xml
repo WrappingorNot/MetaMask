@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item android:title="네트워크">
+        <menu >
+            <item
+                android:title="이더리룸 메인넷" />
+            <item
+                android:title="Ropsten 테스트 네트워크" />
+            <item
+                android:title="Kovan 테스트 네트워크" />
+            <item
+                android:title="Rinkeby 테스트 네트워크" />
+            <item
+                android:title="LocalHost 8888" />
+        </menu>
+    </item>
 </menu>

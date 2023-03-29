@@ -10,6 +10,7 @@ import android.text.ClipboardManager
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.PopupMenu
 import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
@@ -73,11 +74,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.networkList.setOnClickListener(View.OnClickListener {
 
             //리사이클러 뷰 사용
-
+//            var popupMenu= PopupMenu
 
             dialog.myDig()
-
-
         })
 
         //account 화면 bottomdialog 띄우기
@@ -103,10 +102,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // 툴바 메뉴 버튼이 클릭 됐을 때 실행하는 함수
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        // 클릭한 툴바 메뉴 아이템 id 마다 다르게 실행하도록 설정
         when(item!!.itemId){
             android.R.id.home->{
-                // 햄버거 버튼 클릭시 네비게이션 드로어 열기
+                // 세줄 버튼 클릭시 네비게이션 드로어 열기
                 drawerLayout.openDrawer(GravityCompat.START)
             }
         }
