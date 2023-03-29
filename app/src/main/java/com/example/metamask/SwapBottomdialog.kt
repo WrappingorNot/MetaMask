@@ -1,5 +1,6 @@
 package com.example.metamask
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -53,6 +54,9 @@ class SwapBottomdialogAdapter : RecyclerView.Adapter<SwapBottomdialogAdapter.Hol
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         val item = itemList[position]
+
+
+
         holder.bind(item)
     }
 
@@ -66,6 +70,12 @@ class SwapBottomdialogAdapter : RecyclerView.Adapter<SwapBottomdialogAdapter.Hol
     inner class Holder(val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: BottomDialogItem) {
             view.findViewById<TextView>(R.id.tv_netName).text = item.name
+
+            view.setOnClickListener(View.OnClickListener {
+                view.findViewById<TextView>(R.id.coin_select1).text = item.name
+
+            })
+
         }
     }
 

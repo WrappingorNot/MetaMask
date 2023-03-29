@@ -27,6 +27,8 @@
         android:id="@+id/recyclerView_1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_height="wrap_content">
 
     </androidx.recyclerview.widget.RecyclerView>

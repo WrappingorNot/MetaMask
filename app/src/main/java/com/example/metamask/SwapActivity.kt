@@ -101,9 +101,7 @@ class SwapActivity : AppCompatActivity() {
             binding.tvExchange.text = "변환 후 :"+ exchangerate*(Integer.parseInt(binding.moneyExchange.text.toString())) + "원"
         })
 
-        binding.btnUpdown.setOnClickListener(View.OnClickListener {
 
-        })
 
 
 
@@ -114,6 +112,8 @@ class SwapActivity : AppCompatActivity() {
 
 
             bottomdialog.show(supportFragmentManager, bottomdialog.tag)
+
+            
         })
         val searchview = bottomdialog.view?.findViewById<SearchView>(R.id.search_view)
 
