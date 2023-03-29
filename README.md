@@ -9,7 +9,7 @@
 
  2. 스왑 화면 구현
 
- 3. 각 메뉴 클릭 기능, 클릭이벤트시 Dialog 플로팅 구현 
+ 3. 각 메뉴 클릭 기능, 클릭이벤트시 Dialog 플로팅 구현 (Custom Dialog, BottomSheetDialog, Fragment, RecyclerView)
 
  4. 메인화면에서 스왑화면 전환 기능 구현(Intent)
 
