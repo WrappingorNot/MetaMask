@@ -61,10 +61,10 @@ class SwapBottomdialogAdapter : RecyclerView.Adapter<SwapBottomdialogAdapter.Hol
     }
 
     fun setItem(items: MutableList<BottomDialogItem>) {
-        if (!items.isNullOrEmpty()) {
+       // if (!items.isNullOrEmpty()) {
             itemList = items
             notifyDataSetChanged()
-        }
+        //}
     }
 
     inner class Holder(val view: View) : RecyclerView.ViewHolder(view) {
@@ -72,7 +72,8 @@ class SwapBottomdialogAdapter : RecyclerView.Adapter<SwapBottomdialogAdapter.Hol
             view.findViewById<TextView>(R.id.tv_netName).text = item.name
 
             view.setOnClickListener(View.OnClickListener {
-                view.findViewById<TextView>(R.id.coin_select1).text = item.name
+                //다른것 선택 금지
+                //view.findViewById<TextView>(R.id.coin_select1).text = item.name
 
             })
 

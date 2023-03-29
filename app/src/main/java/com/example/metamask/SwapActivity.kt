@@ -6,7 +6,9 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
@@ -98,7 +100,15 @@ class SwapActivity : AppCompatActivity() {
             }
         })
         binding.btnExchange.setOnClickListener(View.OnClickListener {
-            binding.tvExchange.text = "변환 후 :"+ exchangerate*(Integer.parseInt(binding.moneyExchange.text.toString())) + "원"
+            var edit = binding.tvExchange.text.toString()
+            if(edit.isEmpty()) {
+               // 아무 값도 없을때 오류 발생 하지 않도록
+                Toast.makeText(this@SwapActivity, "숫자를 입력하세요.", Toast.LENGTH_SHORT).show()
+
+            }else{
+                binding.tvExchange.text =
+                    "변환 후 :" + exchangerate * (Integer.parseInt(binding.moneyExchange.text.toString())) + "원"
+            }
         })
 
 
@@ -113,12 +123,16 @@ class SwapActivity : AppCompatActivity() {
 
             bottomdialog.show(supportFragmentManager, bottomdialog.tag)
 
-            
+
         })
+
+        //검색기능
         val searchview = bottomdialog.view?.findViewById<SearchView>(R.id.search_view)
+
 
         searchview?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
+                Log.d("searchview", searchview.toString())
 
 
                 return true
@@ -144,30 +158,9 @@ class SwapActivity : AppCompatActivity() {
 
         })
 
-        getPrice()
 
     }
 
 
 
-
-    fun getMarket( list_market: ArrayList<BottomDialogItem>){
-        //로그를 보기위한 Intercepter
-
-    }
-    fun getPrice() {
-        val interceptor1 = HttpLoggingInterceptor()
-        interceptor1.setLevel(HttpLoggingInterceptor.Level.BODY)
-        val client = OkHttpClient.Builder()
-            .addInterceptor(interceptor1)
-            .build()
-        //retrofit설정
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.upbit.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(client) //로그 기능
-            .build()
-        var initMyApi = retrofit.create(initMyApi::class.java)
-
-    }
 }
