@@ -125,6 +125,12 @@ class SwapActivity : AppCompatActivity() {
 
 
         })
+        //옵션 다이얼로그
+        binding.optionBtn.setOnClickListener(View.OnClickListener {
+            val bottomdialog = BtmOptionDialog()
+
+            bottomdialog.show(supportFragmentManager, bottomdialog.tag)
+        })
 
         //검색기능
         val searchview = bottomdialog.view?.findViewById<SearchView>(R.id.search_view)

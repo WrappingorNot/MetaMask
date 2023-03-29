@@ -126,9 +126,10 @@
     </FrameLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="336dp"
+        android:layout_marginTop="268dp"
         android:background="#00FFFFFF"
         android:fontFamily="monospace"
         android:text="고급 옵션"
@@ -139,8 +140,27 @@
         app:cornerRadius="20dp"
         app:iconTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:rippleColor="#FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="monospace"
+        android:text="확인"
+        android:textAlignment="center"
+        android:textColor="#0383E2"
+        android:textStyle="bold"
+        app:backgroundTint="#009F7575"
+        app:cornerRadius="20dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/materialButton"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
         app:rippleColor="#FFFFFF" />
 
