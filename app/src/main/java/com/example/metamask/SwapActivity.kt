@@ -2,6 +2,7 @@ package com.example.metamask
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.metamask.Retrofit.accountResponse
 import com.example.metamask.Retrofit.initMyApi
@@ -24,6 +25,13 @@ class SwapActivity : AppCompatActivity() {
 
         getMarket()
         getPrice()
+
+
+        binding.coinSelect1.setOnClickListener(View.OnClickListener {
+            val bottomdialog = SwapBottomdialog()
+
+            bottomdialog.show(supportFragmentManager, bottomdialog.tag)
+        })
 
     }
 

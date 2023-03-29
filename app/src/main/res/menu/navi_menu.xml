@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+        android:title="활동" />
 
-    <item
-        android:id="@+id/item_info"
-        android:title="설정" />
-    <item
-        android:id="@+id/item_report"
-        android:title="지원" />
-    <item
-        android:id="@+id/item_setting"
-        android:title="기능요청" />
-    <item
-        android:id="@+id/item_notice"
-        android:title="잠금" />
-    
+    </group>
+
+    <item android:title="공유">
+        <menu >
+            <item
+                android:title="공공주소 공유하기" />
+            <item
+                android:title="이더스캔에서 보기" />
+
+        </menu>
+    </item>
+
+    <item android:title="설정">
+        <menu >
+            <item
+                android:title="설정" />
+            <item
+                android:id="@+id/item_report"
+                android:title="지원" />
+            <item
+                android:id="@+id/item_setting"
+                android:title="기능요청" />
+            <item
+                android:id="@+id/item_notice"
+                android:title="잠금" />
+        </menu>
+    </item>
+
 </menu>

@@ -6,4 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".SwapActivity">
 
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="116dp"
+        android:orientation="horizontal"
+        android:background="@drawable/dg_radius_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/coin_select1"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:drawableStart="@drawable/layer_list"
+            android:drawableEnd="@drawable/baseline_expand_more_24"
+            android:filterTouchesWhenObscured="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:text="  ETH"
+            android:textSize="20dp"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+
+        <EditText
+            android:id="@+id/money_exchange"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/dg_radius_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <TextView
+            android:id="@+id/coin_select2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:drawableStart="@drawable/layer_list"
+            android:filterTouchesWhenObscured="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:text="  ETH"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+    </FrameLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="monospace"
+        android:text="고급 옵션"
+        android:textAlignment="center"
+        android:textColor="#0383E2"
+        android:textStyle="bold"
+        app:backgroundTint="#009F7575"
+        app:cornerRadius="20dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:rippleColor="#FFFFFF" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

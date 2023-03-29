@@ -116,9 +116,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         TODO("Not yet implemented")
         when(item.itemId){
-            R.id.item_info-> Toast.makeText(this,"menu_item1 실행",Toast.LENGTH_SHORT).show()
-            R.id.item_notice-> Toast.makeText(this,"menu_item2 실행",Toast.LENGTH_SHORT).show()
-            R.id.item_setting-> Toast.makeText(this,"menu_item3 실행",Toast.LENGTH_SHORT).show()
+            //R.id.item_info-> Toast.makeText(this,"menu_item1 실행",Toast.LENGTH_SHORT).show()
+            //R.id.item_notice-> Toast.makeText(this,"menu_item2 실행",Toast.LENGTH_SHORT).show()
+            //R.id.item_setting-> Toast.makeText(this,"menu_item3 실행",Toast.LENGTH_SHORT).show()
         }
         return false
     }
