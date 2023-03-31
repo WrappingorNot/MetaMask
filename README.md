@@ -9,7 +9,7 @@
 
  2. 스왑 화면 구현
 
- 3. 각 메뉴 클릭 기능, 클릭이벤트시 Dialog 플로팅 구현 
+ 3. 각 메뉴 클릭 기능, 클릭이벤트시 Dialog 플로팅 구현 (Custom Dialog, BottomSheetDialog, Fragment, RecyclerView)
 
  4. 메인화면에서 스왑화면 전환 기능 구현(Intent)
 
@@ -44,5 +44,10 @@
   ![통신화면](https://user-images.githubusercontent.com/91662551/228457150-9ddd28a7-4e22-4ae1-91ca-2d47c85cbe89.png)  
 
 
+ - 네트워크, 계정 항목 기능
 
+<img width="358" alt="네트워크 화면" src="https://user-images.githubusercontent.com/91662551/228544858-567df652-a419-4d20-9736-e5870c650781.png">
+
+
+ <img width="361" alt="무제1" src="https://user-images.githubusercontent.com/91662551/228545233-db6dfee9-46d3-4b6a-ae6b-62d55def7e02.png">
 

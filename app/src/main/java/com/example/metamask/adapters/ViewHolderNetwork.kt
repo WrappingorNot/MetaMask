@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.metamask.BottomDialogItem
 import com.example.metamask.R
 import com.example.metamask.dataclasses.netData
 
-class ViewHolderNetwork(val itemList: ArrayList<netData>) :
+class ViewHolderNetwork(var itemList: ArrayList<netData>) :
     RecyclerView.Adapter<ViewHolderNetwork.BoardViewHolderNet>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BoardViewHolderNet {
@@ -23,10 +24,15 @@ class ViewHolderNetwork(val itemList: ArrayList<netData>) :
     }
 
 
-
+    fun setItem(items: ArrayList<netData>) {
+        // if (!items.isNullOrEmpty()) {
+        itemList = items
+        notifyDataSetChanged()
+        //}
+    }
     override fun getItemCount(): Int {
         Log.d("size", itemList.count().toString())
-        return 1
+        return itemList.size
     }
 
 

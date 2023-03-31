@@ -83,6 +83,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.accountBtn.setOnClickListener(View.OnClickListener {
             val bottomdialog = BottomDialog()
 
+
+
             bottomdialog.show(supportFragmentManager, bottomdialog.tag)
         })
     }
