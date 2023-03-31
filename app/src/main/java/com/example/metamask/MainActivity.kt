@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             //리사이클러 뷰 사용
 //            var popupMenu= PopupMenu
-
+///
             dialog.myDig()
         })
 
